@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './Components/Header';
-import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import Home from './Pages/Home';
 import Datapoints from './Pages/Datapoints';
 import Testresults from './Pages/Testresults';
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <BrowserRouter>
+        <Router>
         <nav>
           <Header />
         </nav>
@@ -20,7 +20,7 @@ function App() {
             <Route path="/Datapoints" element={<Datapoints />} />
             <Route path='/Testresults' element={<Testresults />} />
           </Routes>
-          </BrowserRouter>
+          </Router>
       </div>
       </>
     
